@@ -1,24 +1,21 @@
 
 import './App.css'
 
-function MyButton({title }: {title: string}) {
- 
-
-  return (
-   
-      <button>{title}</button>
+type GreetingProps = {
+  name: string;
+  age?: number;
+};
 
 
-)
-} 
-
-
-export default function App() {
+export function Greetings({name = "Kyle Angeles", age = 19}: GreetingProps){
 
   return (
     <div>
-      <h1>Welcome to my first ever typescript + react app</h1>
-      <MyButton title="I'm a button"></MyButton>
+      <h2>Hello, {name}!</h2>
+      {age !== undefined && <p>You are {age} years old</p>}
     </div>
-  )
+  );
 }
+
+export default Greetings;
+
