@@ -24,9 +24,15 @@ console.log(number)
 const user = {
     name: "Kyle",
     age: 19,
-    isadmin = true,
     email: "kyleangeles2006@gmail.com"
 };
 console.log(user.name, user.age)
 console.log(user.email)
-console.log(user.isadmin)
+
+
+
+function add(a: number, b: number) {
+    return a + b;
+}
+
+console.log(add(6, 4))
